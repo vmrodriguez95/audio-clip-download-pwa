@@ -1,5 +1,5 @@
-import myForm from './_form';
-import myTextfield from './_textfield';
+import MyForm from './_form';
+import MyTextfield from './_textfield';
 import ClipList from './_clip-list';
 
 (() => {
@@ -8,9 +8,9 @@ import ClipList from './_clip-list';
     const textfield = ctx.querySelector('[data-app="textfield"]');
     const clipList = ctx.querySelector('[data-app="clip-list"]');
 
-    let txtInstance = new myTextfield(textfield);
+    let txtInstance = new MyTextfield(textfield);
     let clipInstance = new ClipList(clipList);
-    let formInstance = new myForm(form, txtInstance, clipList);
+    let formInstance = new MyForm(form, txtInstance, clipList);
 
     txtInstance.init();
     clipInstance.init();

@@ -1,0 +1,48 @@
+.#{$prefix}form {
+    display: block;
+    font-size: 16px;
+    margin-top: px2em(24);
+
+    &__box {
+        position: relative;
+    }
+
+    &__label {
+        font-size: 18px;
+        color: getColor('dark-grey');
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+        transition: top 0.3s, font-size 0.3s;
+        background-color: getColor('white');
+        cursor: text;
+        pointer-events: none;
+    }
+
+    &__textfield {
+        font-size: 18px;
+        padding: px2em(12, 18);
+        padding-right: px2em(40, 18);
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid getColor('light-grey');
+    }
+
+    &__textfield:focus + &__label,
+    &__textfield.notEmpty + &__label {
+        position: absolute;
+        top: 0;
+        cursor: default;
+        font-size: 16px;
+    }
+
+    &__submit {
+        background-color: getColor('white');
+        top: 50%;
+        right: 5px;
+        position: absolute;
+        transform: translateY(-50%);
+        padding: px2em(8);
+    }
+}

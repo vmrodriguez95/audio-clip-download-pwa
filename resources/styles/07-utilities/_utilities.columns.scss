@@ -1,0 +1,9 @@
+@include generate-columns();
+
+@media screen and (min-width: 640px) {
+    @include generate-columns("tablet");
+}
+
+@media screen and (min-width: 970px) {
+    @include generate-columns("desktop");
+}

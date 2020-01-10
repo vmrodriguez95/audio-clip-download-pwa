@@ -1,0 +1,16 @@
+$local-num-columns: 12;
+
+@mixin generate-columns($size: "") {
+    @for $i from 1 through $local-num-columns {
+        @if $size == "" {
+            .#{$prefix}#{$i}\/#{$local-num-columns} {
+                width: $i / $local-num-columns * 100% !important;
+            }
+        } @else {
+            .#{$prefix}#{$i}\/#{$local-num-columns}--#{$size} {
+                width: $i / $local-num-columns * 100% !important;
+            }
+
+        }
+    }
+}

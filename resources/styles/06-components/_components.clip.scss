@@ -1,0 +1,37 @@
+.#{$prefix}clip {
+    font-size: 18px;
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.25);
+    text-align: center;
+    padding: px2em(6, 18);
+    height: 100%;
+
+    &__header {
+        position: relative;
+    }
+
+    &__controller {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        transform: translate(-50%, -50%);
+        border-radius: 100%;
+        box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &__track {
+        margin-bottom: px2em(12, 18);
+    }
+
+    &__downloader {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+    }
+
+    [aria-hidden="true"] {
+        display: none;
+    }
+}

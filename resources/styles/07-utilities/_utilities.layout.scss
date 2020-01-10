@@ -1,0 +1,17 @@
+.#{$prefix}layout {
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    padding: 0;
+
+    &__column {
+        padding: 0 px2em(4);
+        width: 100%;
+        margin-bottom: px2em(12);
+
+        &:first-child:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

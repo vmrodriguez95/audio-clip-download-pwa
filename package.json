@@ -1,0 +1,34 @@
+{
+  "name": "audio-clip-download-pwa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/starter.js",
+  "scripts": {
+    "rollup": "rollup resources/scripts/script.js --format cjs --file public/js/main.js",
+    "babel": "babel public/js/main.js -o public/js/main.js",
+    "compile-styles": "sass resources/styles/styles.scss public/css/styles.css",
+    "cleancss": "cleancss -o public/css/styles.css public/css/styles.css",
+    "start": "npm run rollup && npm run compile-styles && npm run cleancss && node app/starter.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmrodriguez95/audio-clip-download-pwa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vmrodriguez95/audio-clip-download-pwa/issues"
+  },
+  "homepage": "https://github.com/vmrodriguez95/audio-clip-download-pwa#readme",
+  "dependencies": {
+    "clean-css-cli": "^4.3.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "babel-preset-minify": "^0.5.1"
+  }
+}

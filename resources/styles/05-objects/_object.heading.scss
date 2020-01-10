@@ -1,0 +1,14 @@
+.#{$prefix}heading {
+    display: block;
+    margin: 0;
+
+    &--1 {
+        font-size: 44px;
+        line-height: calcLineHeight(44);
+        margin-bottom: px2em(20, 44);
+    }
+
+    &--center {
+        text-align: center;
+    }
+}

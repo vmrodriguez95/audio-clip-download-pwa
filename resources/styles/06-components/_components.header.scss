@@ -1,0 +1,7 @@
+.#{$prefix}header {
+    background-color: getColor("dark-blue");
+    color: getColor("white");
+    text-align: center;
+    font-size: 16px;
+    padding: px2em(12) px2em(8);
+}

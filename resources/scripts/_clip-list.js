@@ -1,3 +1,5 @@
+import media from './_media.js';
+
 const textMessage = "No se han encontrado resultados";
 
 /**
@@ -102,6 +104,7 @@ const buildColumn = (info, message = "") => {
         column.innerHTML = `<p class="vm-paragraph">${message}</p>`;
     } else {
         column.classList.add("vm-layout__column", "vm-6/12", "vm-4/12--tablet", "vm-3/12--desktop");
+        column.setAttribute('data-app', 'column');
         column.innerHTML = `
             <div class="vm-clip">
                 <div class="vm-clip__header">
@@ -122,6 +125,7 @@ const buildColumn = (info, message = "") => {
         `;
 
         handlerDownloader(findDownloadButton(column));
+        media.bind(column);
     }
 
     return column;
